@@ -20,6 +20,9 @@
     "@babel/preset-env": "^7.5.5",
     "@babel/register": "^7.5.5",
     "@babel/runtime": "^7.5.5",
+    "@keboola/eslint-config-node": "^1.0.1",
+    "eslint": "^6.1.0",
+    "eslint-plugin-import": "^2.18.2",
     "middy": "^0.28.4",
     "mocha": "^6.2.0",
     "sinon": "^7.3.2"

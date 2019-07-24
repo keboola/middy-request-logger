@@ -1,7 +1,6 @@
 import * as R from 'ramda';
 
 export default (config) => {
-
   const defaults = {
     logger: console.log,
     filter: {
@@ -21,13 +20,12 @@ export default (config) => {
 
   return ({
     before: (handler, next) => {
-      const event = handler.event;
-      const pathFromEvent = (path) => R.pathOr(null, path, event);
-      const filtered =  R.map(pathFromEvent, options.filter);
+      const { event } = handler;
+      const pathFromEvent = path => R.pathOr(null, path, event);
+      const filtered = R.map(pathFromEvent, options.filter);
       options.logger(JSON.stringify(filtered));
 
-      // next();
+      next();
     },
   });
-
 };
