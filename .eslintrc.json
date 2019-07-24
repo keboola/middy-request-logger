@@ -1,0 +1,17 @@
+{
+  "extends": [
+    "@keboola/node"
+  ],
+  "plugins": [
+    "import"
+  ],
+  "rules": {
+    "no-underscore-dangle": ["error", {
+      "allow": ["__"]
+    }]
+  },
+  "env": {
+    "node": true,
+    "mocha": true
+  }
+}
