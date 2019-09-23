@@ -1,0 +1,35 @@
+{
+  "name": "oauth-api",
+  "author": "Miroslav Cillik <miro@keboola.com>",
+  "license": "MIT",
+  "version": "1.0.0",
+  "description": "Keboola OAuth API",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/keboola/oauth-api.git"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.4.4",
+    "ramda": "^0.26.1",
+    "unexpected": "^11.7.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-transform-runtime": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/register": "^7.5.5",
+    "@babel/runtime": "^7.5.5",
+    "@keboola/eslint-config-node": "^1.0.1",
+    "eslint": "^6.1.0",
+    "eslint-plugin-import": "^2.18.2",
+    "middy": "^0.28.4",
+    "mocha": "^6.2.0",
+    "sinon": "^7.3.2"
+  },
+  "scripts": {
+    "lint": "./node_modules/.bin/eslint src tests",
+    "tests": "mocha --timeout 0 --require @babel/register --full-trace tests",
+    "babel": "./node_modules/.bin/babel src --out-dir dist"
+  }
+}

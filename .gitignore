@@ -1,0 +1,12 @@
+.idea
+node_modules
+jspm_packages
+.serverless
+.webpack
+.env
+.docker
+jre-*
+jdk-*
+.DS_Store
+certs
+yarn.lock
