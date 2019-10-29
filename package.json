@@ -1,9 +1,9 @@
 {
-  "name": "oauth-api",
-  "author": "Miroslav Cillik <miro@keboola.com>",
-  "license": "MIT",
+  "name": "@keboola/middy-request-logger",
   "version": "1.0.0",
   "description": "Keboola OAuth API",
+  "author": "Miroslav Cillik <miro@keboola.com>",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/keboola/oauth-api.git"
@@ -30,6 +30,12 @@
   "scripts": {
     "lint": "./node_modules/.bin/eslint src tests",
     "tests": "mocha --timeout 0 --require @babel/register --full-trace tests",
-    "babel": "./node_modules/.bin/babel src --out-dir dist"
-  }
+    "babel": "./node_modules/.bin/babel src --out-dir dist",
+    "prepack:babel": "./node_modules/.bin/babel src/ -d dist",
+    "prepack": "yarn prepack:babel"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "dist/requestLoggerMiddleware"
 }
